@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AUXILIAR MANIPULADORA DEL CARTÓN | Fabricación de Embalaje de Cartón</title>
+<meta name="description" content="Diseño, troquelado y fabricación de cajas, embalaje a medida y expositores de cartón. Más de 30 años de experiencia, distribución en toda España."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#241509",
+                        "on-primary": "#ffffff",
+                        secondary: "#6b5b4a",
+                        "on-secondary": "#ffffff",
+                        accent: "#d9651b",
+                        "on-accent": "#ffffff",
+                        kraft: "#c79a5e",
+                        "kraft-light": "#ecdcb8",
+                        "kraft-dark": "#8a6435",
+                        surface: "#f8f4ea",
+                        "surface-container": "#efe6d2",
+                        "surface-alt": "#f1ead9",
+                        outline: "#cdbb98",
+                        "outline-variant": "#e1d4b4",
+                        error: "#ba1a1a",
+                        "on-surface": "#241509",
+                    },
+                    fontFamily: {
+                        display: ["Oswald", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    spacing: {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "section-gap": "140px",
+                        "container-max": "1280px",
+                        gutter: "32px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .cardboard-pattern {
+            background-color: #c79a5e;
+            background-image:
+                repeating-linear-gradient(45deg, rgba(36,21,9,0.10) 0, rgba(36,21,9,0.10) 2px, transparent 2px, transparent 16px),
+                repeating-linear-gradient(-45deg, rgba(36,21,9,0.07) 0, rgba(36,21,9,0.07) 2px, transparent 2px, transparent 16px);
+        }
+        .cardboard-pan {
+            animation: cardboardPan 50s linear infinite;
+        }
+        @keyframes cardboardPan {
+            0% { background-position: 0 0, 0 0; }
+            100% { background-position: 400px 400px, -400px 400px; }
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.4s ease-in-out;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.9s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-accent selection:text-on-accent overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant transition-all duration-500 h-20">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display text-xl md:text-2xl font-semibold tracking-tight text-primary leading-none" href="#">
+AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
+</a>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="#productos">Productos</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="#proceso">Proceso</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="#sectores">Sectores</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="#contacto">Contacto</a>
+</div>
+<a class="hidden md:inline-block px-6 py-3 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="#contacto">Solicitar presupuesto</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</nav>
+<div class="hidden md:!hidden fixed inset-0 z-40 bg-surface" id="mobile-menu">
+<div class="flex flex-col h-full px-margin-mobile pt-28 pb-12">
+<nav class="flex flex-col">
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="#productos">Productos</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="#proceso">Proceso</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="#sectores">Sectores</a>
+<a class="font-display text-2xl text-primary py-6" href="#contacto">Contacto</a>
+</nav>
+<a class="mt-auto w-full py-5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center" href="#contacto">
+                Solicitar presupuesto
+            </a>
+</div>
+</div>
+<!-- 1. HERO -->
+<section class="relative h-screen w-full overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0 cardboard-pattern cardboard-pan opacity-80"></div>
+<div class="absolute inset-0 bg-primary/75"></div>
+<div class="relative z-10 flex flex-col justify-center items-center text-center md:items-start md:text-left h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-6">Fabricación de embalaje de cartón</span>
+<h1 class="font-display text-5xl md:text-7xl font-semibold uppercase leading-[1.05] text-white max-w-4xl mb-6">
+                Embalaje de cartón a la medida de tu producto
+            </h1>
+<p class="text-lg text-white/85 max-w-2xl mx-auto md:mx-0 mb-12">
+                Diseñamos, troquelamos y fabricamos cajas, embalaje a medida y expositores de cartón para empresas de toda España.
+            </p>
+<div class="flex flex-col items-center w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:flex-row gap-5">
+<a class="w-full sm:w-auto px-10 py-4 bg-accent text-on-accent font-semibold uppercase tracking-[0.1em] text-sm hover:bg-white hover:text-primary transition-all duration-300 text-center" href="#contacto">
+                    Solicitar presupuesto
+                </a>
+<a class="w-full sm:w-auto px-10 py-4 border border-white/40 text-white font-semibold uppercase tracking-[0.1em] text-sm hover:border-white transition-all duration-300 text-center" href="#productos">
+                    Ver productos
+                </a>
+</div>
+</div>
+</section>
+<!-- 2. PRESENTACIÓN -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-7 fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Quiénes somos</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight mb-8">Más de tres décadas dando forma al cartón</h2>
+<p class="text-lg text-secondary leading-relaxed">
+                    En Auxiliar Manipuladora del Cartón diseñamos, troquelamos y fabricamos soluciones de embalaje adaptadas a cada producto y cada sector. Combinamos maquinaria industrial con un equipo técnico que acompaña al cliente desde el primer boceto hasta la entrega en planta.
+                </p>
+</div>
+<div class="md:col-span-5 flex flex-col gap-10 md:pl-16 border-l border-outline-variant fade-in-up" style="transition-delay: 150ms;">
+<div>
+<span class="font-display text-4xl md:text-5xl font-semibold text-primary block">30+</span>
+<span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Años de experiencia</span>
+</div>
+<div>
+<span class="font-display text-4xl md:text-5xl font-semibold text-primary block">12.000 t</span>
+<span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Cartón procesado al año</span>
+</div>
+<div>
+<span class="font-display text-2xl md:text-3xl font-semibold text-primary block">Cobertura nacional</span>
+<span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Distribución en toda España</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. PRODUCTOS DESTACADOS -->
+<section class="bg-surface-container py-section-gap" id="productos">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-16 fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Catálogo</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight">Productos destacados</h2>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Producto 1 -->
+<div class="group p-10 bg-surface border border-outline-variant hover:border-accent transition-all duration-300 fade-in-up">
+<span class="material-symbols-outlined text-5xl text-accent mb-8 group-hover:scale-110 transition-transform block">inventory_2</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Embalaje estándar</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-3">Cajas Americanas</h3>
+<p class="text-secondary">El embalaje más versátil, en cualquier medida y gramaje de cartón ondulado.</p>
+</div>
+<!-- Producto 2 -->
+<div class="group p-10 bg-surface border border-outline-variant hover:border-accent transition-all duration-300 fade-in-up" style="transition-delay: 100ms;">
+<span class="material-symbols-outlined text-5xl text-accent mb-8 group-hover:scale-110 transition-transform block">straighten</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">A medida</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-3">Embalaje a Medida</h3>
+<p class="text-secondary">Diseño troquelado a la medida exacta del producto, máxima protección y mínimo desperdicio.</p>
+</div>
+<!-- Producto 3 -->
+<div class="group p-10 bg-surface border border-outline-variant hover:border-accent transition-all duration-300 fade-in-up" style="transition-delay: 200ms;">
+<span class="material-symbols-outlined text-5xl text-accent mb-8 group-hover:scale-110 transition-transform block">storefront</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Punto de venta</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-3">Expositores y Displays</h3>
+<p class="text-secondary">Expositores de cartón listos para montar sin herramientas, pensados para el lineal.</p>
+</div>
+<!-- Producto 4 -->
+<div class="group p-10 bg-surface border border-outline-variant hover:border-accent transition-all duration-300 fade-in-up" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-5xl text-accent mb-8 group-hover:scale-110 transition-transform block">content_cut</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Identidad de marca</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-3">Troquelados Especiales</h3>
+<p class="text-secondary">Formas y aperturas personalizadas con troquel propio, para packaging con identidad propia.</p>
+</div>
+</div>
+</section>
+<!-- 4. SERVICIOS -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="servicios">
+<div class="text-center mb-20 fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Servicios</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight">Soluciones integrales de embalaje</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-10 border border-outline-variant hover:border-primary transition-all duration-300 group fade-in-up">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:scale-110 transition-transform">design_services</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-4">Diseño y Troquelado</h3>
+<p class="text-secondary">Desarrollamos el diseño estructural y gráfico de tu embalaje, con prototipado antes de pasar a producción.</p>
+</div>
+<div class="p-10 border border-outline-variant hover:border-primary transition-all duration-300 group fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:scale-110 transition-transform">precision_manufacturing</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-4">Fabricación a Medida</h3>
+<p class="text-secondary">Producción bajo pedido en distintos gramajes y calidades de cartón ondulado, ajustada a cada volumen.</p>
+</div>
+<div class="p-10 border border-outline-variant hover:border-primary transition-all duration-300 group fade-in-up" style="transition-delay: 300ms;">
+<span class="material-symbols-outlined text-4xl mb-8 group-hover:scale-110 transition-transform">local_shipping</span>
+<h3 class="font-display text-xl font-semibold uppercase mb-4">Logística y Distribución</h3>
+<p class="text-secondary">Paletizado, almacenaje y entrega directa en tu planta o centro logístico, en toda España.</p>
+</div>
+</div>
+</section>
+<!-- 5. PROCESO DE FABRICACIÓN -->
+<section class="bg-primary text-on-primary py-section-gap" id="proceso">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-20 fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">El proceso</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight">De la idea al embalaje final</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+<div class="fade-in-up">
+<span class="font-display text-5xl text-white/20 block mb-4">01</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Consulta técnica</h4>
+<p class="text-on-primary/70">Analizamos el producto, su peso y su transporte para definir el embalaje óptimo.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 100ms;">
+<span class="font-display text-5xl text-white/20 block mb-4">02</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Diseño y prototipo</h4>
+<p class="text-on-primary/70">Creamos el plano técnico y un prototipo físico para validar antes de fabricar en serie.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 200ms;">
+<span class="font-display text-5xl text-white/20 block mb-4">03</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Producción</h4>
+<p class="text-on-primary/70">Impresión, troquelado y montaje en planta, con control de gramaje y resistencia.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 300ms;">
+<span class="font-display text-5xl text-white/20 block mb-4">04</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Control de calidad</h4>
+<p class="text-on-primary/70">Verificamos resistencia, medidas y acabado en cada lote antes de su salida.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 400ms;">
+<span class="font-display text-5xl text-white/20 block mb-4">05</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Logística y entrega</h4>
+<p class="text-on-primary/70">Paletizado y transporte coordinado hasta tu almacén o línea de producción.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. SECTORES -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden" id="sectores">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Sectores</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight mb-8">Fabricamos embalaje para sectores muy diversos</h2>
+<p class="text-lg text-secondary mb-10">
+                    Adaptamos cada diseño a los requisitos específicos del sector: resistencia, homologación alimentaria o volumen de producción. Trabajamos tanto con grandes cuentas como con pymes que necesitan series cortas.
+                </p>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col">
+<span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Alimentación</span>
+<span class="text-secondary">Embalaje homologado para uso alimentario</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Ecommerce</span>
+<span class="text-secondary">Cajas para envío y última milla</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Industrial</span>
+<span class="text-secondary">Embalaje de componentes y maquinaria</span>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Agrícola</span>
+<span class="text-secondary">Cajas para fruta y hortaliza</span>
+</div>
+</div>
+</div>
+<div class="relative h-[420px] md:h-[500px] overflow-hidden fade-in-up" style="transition-delay: 200ms;">
+<div class="absolute inset-0 cardboard-pattern"></div>
+<div class="absolute inset-0 bg-primary/80 hover:bg-primary/65 transition-all duration-500 flex items-center justify-center text-center px-10">
+<div>
+<span class="material-symbols-outlined text-6xl text-white mb-4 block">factory</span>
+<span class="font-display text-2xl font-semibold uppercase text-white block">Planta propia</span>
+<p class="text-white/70 mt-2">Fabricación en planta propia y distribución en toda España</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. CTA & CONTACTO -->
+<section class="py-section-gap bg-surface-container overflow-hidden" id="contacto">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 fade-in-up">
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight mb-8">¿Necesitas un embalaje a medida?</h2>
+<p class="text-lg text-secondary mb-12">Cuéntanos tu producto y te preparamos una propuesta de embalaje sin compromiso.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">mail</span>
+<!-- Placeholder pendiente de email real de la empresa -->
+<span>info@auxiliarmanipuladoradelcarton.com</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">call</span>
+<!-- Placeholder pendiente de teléfono real -->
+<span>+34 900 000 000</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-accent">location_on</span>
+<!-- Placeholder pendiente de dirección real de la planta -->
+<span>Polígono Industrial, Nave 12 · España</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 bg-surface p-10 md:p-16 border border-outline-variant fade-in-up" style="transition-delay: 200ms;">
+<div class="hidden mb-8 p-4 border text-sm" id="form-status"></div>
+<form action="/api/contact" class="space-y-8" method="POST">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Nombre</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="nombre" placeholder="Tu nombre completo" required type="text"/>
+</div>
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Empresa</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="empresa" placeholder="Nombre de tu empresa" type="text"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Email</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="email" placeholder="email@empresa.com" required type="email"/>
+</div>
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Teléfono</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="telefono" placeholder="600 000 000" type="tel"/>
+</div>
+</div>
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Tipo de embalaje</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="tipo_embalaje">
+<option>Cajas estándar</option>
+<option>Embalaje a medida</option>
+<option>Expositores y displays</option>
+<option>Troquelado especial</option>
+<option>Otro</option>
+</select>
+</div>
+<div class="relative">
+<label class="text-xs font-semibold uppercase tracking-[0.15em] text-secondary mb-2 block">Mensaje</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-accent py-2 transition-colors" name="mensaje" placeholder="Cuéntanos tu producto, medidas aproximadas y volumen estimado..." required rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-semibold uppercase tracking-[0.2em] text-sm hover:bg-accent transition-all duration-300" type="submit">
+                            Enviar consulta
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<div class="md:col-span-6">
+<h3 class="font-display text-2xl font-semibold uppercase text-primary mb-6">Auxiliar Manipuladora del Cartón</h3>
+<p class="text-secondary max-w-sm">Diseño y fabricación de embalaje de cartón a medida desde hace más de 30 años.</p>
+</div>
+<div class="md:col-span-2">
+<h4 class="text-xs font-semibold uppercase tracking-[0.15em] mb-6">Explorar</h4>
+<div class="flex flex-col space-y-4">
+<a class="text-secondary hover:text-primary transition-colors" href="#productos">Productos</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#servicios">Servicios</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#proceso">Proceso</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#contacto">Contacto</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="text-xs font-semibold uppercase tracking-[0.15em] mb-6">Síguenos</h4>
+<div class="flex flex-col space-y-4">
+<a class="text-secondary hover:text-primary transition-colors" href="#">LinkedIn</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">Facebook</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="text-xs font-semibold uppercase tracking-[0.15em] mb-6">Legal</h4>
+<div class="flex flex-col space-y-4">
+<a class="text-secondary hover:text-primary transition-colors" href="#">Política de privacidad</a>
+<a class="text-secondary hover:text-primary transition-colors" href="#">Cookies</a>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant">
+<p class="text-xs font-semibold uppercase tracking-[0.1em] text-secondary">© 2026 Auxiliar Manipuladora del Cartón. Todos los derechos reservados.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a href="#" aria-label="Subir arriba"><span class="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">arrow_upward</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function setMobileMenuOpen(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuIcon.textContent = open ? 'close' : 'menu';
+            document.body.classList.toggle('overflow-hidden', open);
+        }
+
+        menuToggle.addEventListener('click', () => {
+            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMobileMenuOpen(false));
+        });
+
+        // Mensaje de éxito/error tras enviar el formulario de contacto
+        const formStatus = document.getElementById('form-status');
+        const contactoParam = new URLSearchParams(window.location.search).get('contacto');
+        if (formStatus && contactoParam) {
+            const ok = contactoParam === 'ok';
+            formStatus.textContent = ok
+                ? 'Gracias por tu mensaje. Te responderemos lo antes posible.'
+                : 'No se ha podido enviar el mensaje. Inténtalo de nuevo o escríbenos directamente por email.';
+            formStatus.classList.remove('hidden');
+            formStatus.classList.add(ok ? 'border-accent' : 'border-error', ok ? 'text-accent' : 'text-error');
+            window.history.replaceState({}, document.title, window.location.pathname + '#contacto');
+        }
+    </script>
+</body>
+</html>
