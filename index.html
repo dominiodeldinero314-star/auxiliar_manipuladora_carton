@@ -52,6 +52,9 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
+        .star-rating .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 20;
+        }
         .hero-zoom {
             animation: heroZoom 22s ease-in-out infinite alternate;
         }
@@ -161,7 +164,7 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 </div>
 </section>
 <!-- 2. PRESENTACIÓN -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<section class="pt-section-gap pb-12 md:pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
 <div class="md:col-span-5 fade-in-up">
 <div class="relative aspect-[4/3] overflow-hidden border border-outline-variant">
@@ -203,7 +206,7 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 </div>
 </section>
 <!-- 3. POR QUÉ ELEGIRNOS -->
-<section class="pt-16 md:pt-20 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="por-que-elegirnos">
+<section class="pt-8 md:pt-10 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="por-que-elegirnos">
 <div class="text-center mb-20 fade-in-up">
 <span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Por qué elegirnos</span>
 <h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight">Una empresa industrial consolidada</h2>
@@ -358,19 +361,19 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <div class="grid grid-cols-2 gap-4">
 <div class="flex flex-col p-4 border border-accent/60 rounded-sm">
 <span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Alimentación</span>
-<span class="text-secondary">Embalaje homologado para uso alimentario</span>
+<span class="text-xs leading-snug text-secondary">Embalaje para uso alimentario</span>
 </div>
 <div class="flex flex-col p-4 border border-accent/60 rounded-sm">
 <span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Ecommerce</span>
-<span class="text-secondary">Cajas para envío y última milla</span>
+<span class="text-xs leading-snug text-secondary">Cajas para envío y última milla</span>
 </div>
 <div class="flex flex-col p-4 border border-accent/60 rounded-sm">
 <span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Industrial</span>
-<span class="text-secondary">Embalaje de componentes y maquinaria</span>
+<span class="text-xs leading-snug text-secondary">Embalaje de componentes y maquinaria</span>
 </div>
 <div class="flex flex-col p-4 border border-accent/60 rounded-sm">
 <span class="text-sm font-semibold uppercase tracking-[0.1em] text-accent">Agrícola</span>
-<span class="text-secondary">Cajas para fruta y hortaliza</span>
+<span class="text-xs leading-snug text-secondary">Cajas para fruta y hortaliza</span>
 </div>
 </div>
 </div>
@@ -388,19 +391,37 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <!-- Placeholder: sustituir por testimonios reales de clientes cuando estén disponibles -->
 <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
 <div class="bg-surface p-10 border border-outline-variant fade-in-up">
-<span class="material-symbols-outlined text-accent text-3xl mb-6 block">format_quote</span>
+<div class="star-rating flex gap-1 text-accent mb-6">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
 <p class="text-secondary mb-8">"Auxiliar Manipuladora del Cartón nos ha resuelto siempre los plazos más ajustados sin renunciar a la calidad del embalaje."</p>
 <span class="font-semibold block">Dirección de Compras</span>
 <span class="text-sm text-secondary">Empresa del sector alimentario</span>
 </div>
 <div class="bg-surface p-10 border border-outline-variant fade-in-up" style="transition-delay: 150ms;">
-<span class="material-symbols-outlined text-accent text-3xl mb-6 block">format_quote</span>
+<div class="star-rating flex gap-1 text-accent mb-6">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
 <p class="text-secondary mb-8">"El embalaje a medida que diseñaron redujo nuestras roturas en transporte y mejoró la imagen de nuestros envíos."</p>
 <span class="font-semibold block">Responsable de Logística</span>
 <span class="text-sm text-secondary">Empresa de ecommerce</span>
 </div>
 <div class="bg-surface p-10 border border-outline-variant fade-in-up" style="transition-delay: 300ms;">
-<span class="material-symbols-outlined text-accent text-3xl mb-6 block">format_quote</span>
+<div class="star-rating flex gap-1 text-accent mb-6">
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+<span class="material-symbols-outlined text-xl">star</span>
+</div>
 <p class="text-secondary mb-8">"Capacidad de producción y trato cercano: nos acompañan desde el primer prototipo hasta la entrega en planta."</p>
 <span class="font-semibold block">Dirección General</span>
 <span class="text-sm text-secondary">Empresa industrial</span>
