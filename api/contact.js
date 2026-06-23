@@ -1,6 +1,6 @@
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
-    res.writeHead(302, { Location: '/index.html' });
+    res.writeHead(302, { Location: '/contacto.html' });
     return res.end();
   }
 
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!nombre || !mensaje || !emailRegex.test(email || '')) {
-    res.writeHead(302, { Location: '/index.html?contacto=error#contacto' });
+    res.writeHead(302, { Location: '/contacto.html?contacto=error#formulario' });
     return res.end();
   }
 
@@ -34,11 +34,11 @@ export default async function handler(req, res) {
 
     if (!response.ok) throw new Error(`Resend respondió ${response.status}`);
 
-    res.writeHead(302, { Location: '/index.html?contacto=ok#contacto' });
+    res.writeHead(302, { Location: '/contacto.html?contacto=ok#formulario' });
     return res.end();
   } catch (err) {
     console.error('Error enviando email de contacto:', err);
-    res.writeHead(302, { Location: '/index.html?contacto=error#contacto' });
+    res.writeHead(302, { Location: '/contacto.html?contacto=error#formulario' });
     return res.end();
   }
 }
