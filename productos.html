@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Productos | Auxiliar Manipuladora del Cartón</title>
+<meta name="description" content="Cajas estándar, cajas personalizadas, packaging industrial, embalaje para ecommerce y soluciones de embalaje a medida. Solicita presupuesto sin compromiso."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#241509",
+                        "on-primary": "#ffffff",
+                        secondary: "#6b5b4a",
+                        "on-secondary": "#ffffff",
+                        accent: "#d9651b",
+                        "on-accent": "#ffffff",
+                        kraft: "#c79a5e",
+                        "kraft-light": "#ecdcb8",
+                        "kraft-dark": "#8a6435",
+                        surface: "#f8f4ea",
+                        "surface-container": "#efe6d2",
+                        "surface-alt": "#f1ead9",
+                        outline: "#cdbb98",
+                        "outline-variant": "#e1d4b4",
+                        error: "#ba1a1a",
+                        "on-surface": "#241509",
+                    },
+                    fontFamily: {
+                        display: ["Oswald", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    spacing: {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "section-gap": "100px",
+                        "container-max": "1280px",
+                        gutter: "32px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.4s ease-in-out;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.9s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-accent selection:text-on-accent overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant transition-all duration-500 h-20">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display text-xl md:text-2xl font-semibold tracking-tight text-primary leading-none" href="index.html">
+AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
+</a>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="index.html">Inicio</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="empresa.html">Empresa</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-primary nav-underline" href="productos.html">Productos</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="index.html#servicios">Servicios</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="contacto.html">Contacto</a>
+</div>
+<a class="hidden md:inline-block px-6 py-3 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</nav>
+<div class="hidden md:!hidden fixed inset-0 z-40 bg-surface" id="mobile-menu">
+<div class="flex flex-col h-full px-margin-mobile pt-28 pb-12">
+<nav class="flex flex-col">
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="index.html">Inicio</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="empresa.html">Empresa</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="productos.html">Productos</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="index.html#servicios">Servicios</a>
+<a class="font-display text-2xl text-primary py-6" href="contacto.html">Contacto</a>
+</nav>
+<a class="mt-auto w-full py-5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center" href="contacto.html">
+                Solicitar presupuesto
+            </a>
+</div>
+</div>
+<!-- BANNER -->
+<section class="relative w-full overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="images/foto4.jpg" alt="Productos de cartón de Auxiliar Manipuladora del Cartón"/>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center pt-36 pb-16 md:pt-44 md:pb-20 px-margin-mobile max-w-container-max mx-auto">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-xs md:text-sm mb-4">Catálogo</span>
+<h1 class="font-display text-4xl md:text-6xl font-semibold uppercase leading-tight text-white">Productos</h1>
+<p class="text-white/85 text-lg max-w-xl mt-4">Desde el embalaje estándar hasta el desarrollo a medida, fabricado en nuestra propia planta.</p>
+</div>
+</section>
+<!-- CATEGORÍA 1: CAJAS ESTÁNDAR -->
+<section class="pt-section-gap pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto4.jpg" alt="Cajas de cartón estándar"/>
+</div>
+</div>
+<div class="md:col-span-6 fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-accent mb-4 block">inventory_2</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">01 · Embalaje estándar</span>
+<h2 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Cajas de cartón estándar</h2>
+<p class="text-secondary text-lg mb-8">Cajas americanas de canal sencillo o doble, en medidas habituales y disponibilidad inmediata. La solución más versátil y económica para envío, almacenaje o mudanzas, con la resistencia que exige el uso diario.</p>
+<a class="block w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:inline-block text-center px-8 py-3.5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 2: CAJAS PERSONALIZADAS -->
+<section class="py-16 bg-surface-container">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 md:order-2 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto5.jpg" alt="Cajas de cartón personalizadas"/>
+</div>
+</div>
+<div class="md:col-span-6 md:order-1 fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-accent mb-4 block">content_cut</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">02 · Identidad de marca</span>
+<h2 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Cajas personalizadas</h2>
+<p class="text-secondary text-lg mb-8">Diseño y troquelado a medida de tu producto: formas, aperturas y resistencia adaptadas exactamente a lo que necesitas, con impresión de tu marca cuando lo requieras.</p>
+<a class="block w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:inline-block text-center px-8 py-3.5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 3: PACKAGING INDUSTRIAL -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto1.jpg" alt="Packaging industrial de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-accent mb-4 block">precision_manufacturing</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">03 · Gran formato</span>
+<h2 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Packaging industrial</h2>
+<p class="text-secondary text-lg mb-8">Embalaje de gran formato y resistencia reforzada para componentes, maquinaria y mercancía paletizada, pensado para soportar manipulación y transporte de larga distancia.</p>
+<a class="block w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:inline-block text-center px-8 py-3.5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 4: EMBALAJE ECOMMERCE -->
+<section class="py-16 bg-surface-container">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 md:order-2 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto6.jpg" alt="Embalaje para ecommerce de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 md:order-1 fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-accent mb-4 block">local_shipping</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">04 · Última milla</span>
+<h2 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Embalaje para ecommerce</h2>
+<p class="text-secondary text-lg mb-8">Cajas ligeras y resistentes, listas para montar, optimizadas para reducir volumen en el transporte y mejorar la experiencia de unboxing de tus clientes.</p>
+<a class="block w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:inline-block text-center px-8 py-3.5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</div>
+</section>
+<!-- CATEGORÍA 5: SOLUCIONES A MEDIDA -->
+<section class="pt-16 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto3.jpg" alt="Soluciones de embalaje a medida de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 fade-in-up" style="transition-delay: 150ms;">
+<span class="material-symbols-outlined text-4xl text-accent mb-4 block">design_services</span>
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">05 · Desarrollo a medida</span>
+<h2 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Soluciones a medida</h2>
+<p class="text-secondary text-lg mb-8">Cuando ningún estándar se ajusta a tu producto, desarrollamos contigo un embalaje exclusivo: prototipo, validación y producción en serie con tu equipo técnico de referencia.</p>
+<a class="block w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:inline-block text-center px-8 py-3.5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="images/foto9.jpg" alt="Planta de fabricación de Auxiliar Manipuladora del Cartón"/>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center fade-in-up">
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight text-white mb-6">¿No encuentras lo que necesitas?</h2>
+<p class="text-lg text-white/85 max-w-2xl mx-auto mb-10">Cuéntanos tu producto y diseñamos contigo el embalaje exacto que necesitas, sin compromiso.</p>
+<a class="inline-block px-10 py-4 bg-accent text-on-accent font-semibold uppercase tracking-[0.1em] text-sm hover:bg-white hover:text-primary transition-all duration-300" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h3 class="font-display text-2xl font-semibold uppercase text-primary mb-4">Auxiliar Manipuladora del Cartón</h3>
+<p class="text-secondary max-w-sm">Diseño y fabricación de embalaje de cartón a medida desde hace más de 30 años.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant">
+<p class="text-xs font-semibold uppercase tracking-[0.1em] text-secondary">© 2026 Auxiliar Manipuladora del Cartón. Todos los derechos reservados.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a href="#" aria-label="Subir arriba"><span class="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">arrow_upward</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function setMobileMenuOpen(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuIcon.textContent = open ? 'close' : 'menu';
+            document.body.classList.toggle('overflow-hidden', open);
+        }
+
+        menuToggle.addEventListener('click', () => {
+            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMobileMenuOpen(false));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Empresa | Auxiliar Manipuladora del Cartón</title>
+<meta name="description" content="Más de 30 años fabricando embalaje de cartón. Conoce nuestra historia, nuestras instalaciones, el proceso productivo y el control de calidad."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#241509",
+                        "on-primary": "#ffffff",
+                        secondary: "#6b5b4a",
+                        "on-secondary": "#ffffff",
+                        accent: "#d9651b",
+                        "on-accent": "#ffffff",
+                        kraft: "#c79a5e",
+                        "kraft-light": "#ecdcb8",
+                        "kraft-dark": "#8a6435",
+                        surface: "#f8f4ea",
+                        "surface-container": "#efe6d2",
+                        "surface-alt": "#f1ead9",
+                        outline: "#cdbb98",
+                        "outline-variant": "#e1d4b4",
+                        error: "#ba1a1a",
+                        "on-surface": "#241509",
+                    },
+                    fontFamily: {
+                        display: ["Oswald", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    spacing: {
+                        "margin-desktop": "80px",
+                        "margin-mobile": "24px",
+                        "section-gap": "100px",
+                        "container-max": "1280px",
+                        gutter: "32px",
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-display { font-family: 'Oswald', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: currentColor;
+            transition: width 0.4s ease-in-out;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.9s ease-out;
+        }
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-accent selection:text-on-accent overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md border-b border-outline-variant transition-all duration-500 h-20">
+<div class="flex justify-between items-center h-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<a class="font-display text-xl md:text-2xl font-semibold tracking-tight text-primary leading-none" href="index.html">
+AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
+</a>
+<div class="hidden md:flex items-center space-x-10">
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="index.html">Inicio</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-primary nav-underline" href="empresa.html">Empresa</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="productos.html">Productos</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="index.html#servicios">Servicios</a>
+<a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="contacto.html">Contacto</a>
+</div>
+<a class="hidden md:inline-block px-6 py-3 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
+<button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" id="menu-icon">menu</span>
+</button>
+</div>
+</nav>
+<div class="hidden md:!hidden fixed inset-0 z-40 bg-surface" id="mobile-menu">
+<div class="flex flex-col h-full px-margin-mobile pt-28 pb-12">
+<nav class="flex flex-col">
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="index.html">Inicio</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="empresa.html">Empresa</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="productos.html">Productos</a>
+<a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="index.html#servicios">Servicios</a>
+<a class="font-display text-2xl text-primary py-6" href="contacto.html">Contacto</a>
+</nav>
+<a class="mt-auto w-full py-5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center" href="contacto.html">
+                Solicitar presupuesto
+            </a>
+</div>
+</div>
+<!-- BANNER -->
+<section class="relative w-full overflow-hidden bg-primary">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="images/auxiliarnave.jpg" alt="Nave industrial de Auxiliar Manipuladora del Cartón"/>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="relative z-10 flex flex-col items-center text-center pt-36 pb-16 md:pt-44 md:pb-20 px-margin-mobile max-w-container-max mx-auto">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-xs md:text-sm mb-4">Nuestra empresa</span>
+<h1 class="font-display text-4xl md:text-6xl font-semibold uppercase leading-tight text-white">Más de 30 años fabricando cartón</h1>
+<p class="text-white/85 text-lg max-w-xl mt-4">Planta propia, maquinaria propia y un equipo técnico que conoce cada fase del proceso de fabricación.</p>
+</div>
+</section>
+<!-- HISTORIA -->
+<section class="pt-section-gap pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-16 fade-in-up">
+<span class="text-accent font-semibold uppercase tracking-[0.2em] text-sm mb-4 block">Nuestra historia</span>
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight">Tres décadas dando forma al cartón</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="fade-in-up">
+<span class="font-display text-5xl text-accent/30 block mb-4">01</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Nuestros orígenes</h4>
+<p class="text-secondary">Comenzamos fabricando cartón ondulado para el tejido industrial de nuestra región, con la calidad de producto y el trato cercano como sello desde el primer pedido.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 150ms;">
+<span class="font-display text-5xl text-accent/30 block mb-4">02</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Crecimiento y especialización</h4>
+<p class="text-secondary">Ampliamos planta, maquinaria y equipo técnico para dar respuesta a clientes de sectores cada vez más diversos, sin perder el control de calidad en cada lote.</p>
+</div>
+<div class="fade-in-up" style="transition-delay: 300ms;">
+<span class="font-display text-5xl text-accent/30 block mb-4">03</span>
+<h4 class="font-display text-lg font-semibold uppercase mb-3">Actualidad</h4>
+<p class="text-secondary">Hoy somos una empresa industrial consolidada, con planta propia y distribución en toda España, que sigue invirtiendo en producción y en personas.</p>
+</div>
+</div>
+</section>
+<!-- INSTALACIONES -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto9.jpg" alt="Instalaciones de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 fade-in-up" style="transition-delay: 150ms;">
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">Instalaciones</span>
+<h3 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Una planta pensada para producir en serie</h3>
+<p class="text-secondary text-lg">Nuestra nave industrial está organizada para optimizar cada fase del proceso: desde la recepción de las bobinas de papel hasta la salida de los pedidos ya paletizados, con espacio de almacenaje para series grandes y entregas urgentes.</p>
+</div>
+</div>
+</section>
+<!-- PLANTA PROPIA -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 md:order-2 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto3.jpg" alt="Planta propia de producción de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 md:order-1 fade-in-up" style="transition-delay: 150ms;">
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">Planta propia</span>
+<h3 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Control total del proceso, de principio a fin</h3>
+<p class="text-secondary text-lg">Disponer de planta y maquinaria propia nos permite controlar cada fase de la fabricación y ofrecer plazos de entrega más ágiles, sin depender de terceros para producir tu pedido.</p>
+</div>
+</div>
+</section>
+<!-- PROCESO PRODUCTIVO -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto5.jpg" alt="Proceso productivo de Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 fade-in-up" style="transition-delay: 150ms;">
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">Proceso productivo</span>
+<h3 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Del rollo de papel al pedido terminado</h3>
+<p class="text-secondary text-lg mb-6">Cada pedido pasa por impresión, troquelado, montaje y control de calidad antes de salir de planta, con la maquinaria y los tiempos ajustados a cada gramaje de cartón.</p>
+<a class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.1em] text-primary hover:text-accent transition-colors" href="index.html#proceso">
+Ver proceso de fabricación completo
+<span class="material-symbols-outlined text-base">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- CONTROL DE CALIDAD -->
+<section class="py-16 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 md:order-2 fade-in-up">
+<div class="relative aspect-[4/3] overflow-hidden border border-outline-variant group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="images/foto2.jpg" alt="Control de calidad en Auxiliar Manipuladora del Cartón"/>
+</div>
+</div>
+<div class="md:col-span-6 md:order-1 fade-in-up" style="transition-delay: 150ms;">
+<span class="text-xs font-semibold uppercase tracking-[0.15em] text-accent mb-3 block">Control de calidad</span>
+<h3 class="font-display text-2xl md:text-3xl font-semibold uppercase mb-5">Un embalaje homogéneo, pedido tras pedido</h3>
+<p class="text-secondary text-lg">Cada lote pasa por controles de resistencia, medida y acabado antes de salir de planta. Nuestro equipo técnico supervisa el proceso de principio a fin para garantizar el mismo resultado cada vez.</p>
+</div>
+</div>
+</section>
+<!-- CTA FINAL -->
+<section class="relative py-section-gap overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" src="images/foto1.jpg" alt="Planta industrial de Auxiliar Manipuladora del Cartón"/>
+<div class="absolute inset-0 bg-primary/80"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center fade-in-up">
+<h2 class="font-display text-3xl md:text-5xl font-semibold uppercase leading-tight text-white mb-6">¿Quieres conocer nuestra planta?</h2>
+<p class="text-lg text-white/85 max-w-2xl mx-auto mb-10">Cuéntanos tu proyecto y te preparamos una propuesta de embalaje sin compromiso.</p>
+<a class="inline-block px-10 py-4 bg-accent text-on-accent font-semibold uppercase tracking-[0.1em] text-sm hover:bg-white hover:text-primary transition-all duration-300" href="contacto.html">Solicitar presupuesto</a>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface border-t border-outline-variant py-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="mb-16">
+<h3 class="font-display text-2xl font-semibold uppercase text-primary mb-4">Auxiliar Manipuladora del Cartón</h3>
+<p class="text-secondary max-w-sm">Diseño y fabricación de embalaje de cartón a medida desde hace más de 30 años.</p>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-outline-variant">
+<p class="text-xs font-semibold uppercase tracking-[0.1em] text-secondary">© 2026 Auxiliar Manipuladora del Cartón. Todos los derechos reservados.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a href="#" aria-label="Subir arriba"><span class="material-symbols-outlined text-secondary hover:text-primary transition-colors cursor-pointer">arrow_upward</span></a>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Animation Logic
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, observerOptions);
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+        // Menú móvil
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuIcon = document.getElementById('menu-icon');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        function setMobileMenuOpen(open) {
+            mobileMenu.classList.toggle('hidden', !open);
+            menuToggle.setAttribute('aria-expanded', String(open));
+            menuIcon.textContent = open ? 'close' : 'menu';
+            document.body.classList.toggle('overflow-hidden', open);
+        }
+
+        menuToggle.addEventListener('click', () => {
+            setMobileMenuOpen(mobileMenu.classList.contains('hidden'));
+        });
+
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMobileMenuOpen(false));
+        });
+    </script>
+</body>
+</html>
