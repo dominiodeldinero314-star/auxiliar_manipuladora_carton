@@ -118,7 +118,6 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="#servicios">Servicios</a>
 <a class="text-sm font-medium uppercase tracking-[0.1em] text-secondary hover:text-primary transition-colors nav-underline" href="contacto.html">Contacto</a>
 </div>
-<a class="hidden md:inline-block px-6 py-3 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.1em] hover:bg-accent transition-colors" href="contacto.html">Solicitar presupuesto</a>
 <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Abrir menú" class="md:hidden text-primary" id="menu-toggle">
 <span class="material-symbols-outlined" id="menu-icon">menu</span>
 </button>
@@ -133,9 +132,6 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="#servicios">Servicios</a>
 <a class="font-display text-2xl text-primary py-6" href="contacto.html">Contacto</a>
 </nav>
-<a class="mt-auto w-full py-5 bg-primary text-on-primary text-sm font-semibold uppercase tracking-[0.15em] hover:bg-accent transition-colors text-center" href="contacto.html">
-                Solicitar presupuesto
-            </a>
 </div>
 </div>
 <!-- 1. HERO -->
@@ -167,50 +163,42 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 </section>
 <!-- TRUST STRIP -->
 <section class="bg-surface-container border-b border-outline-variant px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto fade-in-up">
-<!-- Móvil: lista vertical -->
-<div class="md:hidden divide-y divide-outline-variant">
-<div class="flex items-center gap-3 py-2">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-1.5 shrink-0">factory</span>
-<span class="text-xs font-semibold uppercase tracking-[0.04em]">Producción propia</span>
+<!-- Móvil: cuadrícula 2x2 -->
+<div class="grid grid-cols-2 gap-3 py-6 md:hidden">
+<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
+<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">factory</span>
+<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Producción propia</span>
 </div>
-<div class="flex items-center gap-3 py-2">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-1.5 shrink-0">tune</span>
-<span class="text-xs font-semibold uppercase tracking-[0.04em]">Fabricación personalizada</span>
+<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
+<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">tune</span>
+<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Fabricación personalizada</span>
 </div>
-<div class="flex items-center gap-3 py-2">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-1.5 shrink-0">bolt</span>
-<span class="text-xs font-semibold uppercase tracking-[0.04em]">Entrega rápida</span>
+<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
+<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">bolt</span>
+<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Entrega rápida</span>
 </div>
-<div class="flex items-center gap-3 py-2">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-1.5 shrink-0">verified</span>
-<span class="text-xs font-semibold uppercase tracking-[0.04em]">Calidad garantizada</span>
-</div>
-<div class="flex items-center gap-3 py-2">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-1.5 shrink-0">support_agent</span>
-<span class="text-xs font-semibold uppercase tracking-[0.04em]">Atención personalizada</span>
+<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
+<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">verified</span>
+<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Calidad garantizada</span>
 </div>
 </div>
-<!-- Escritorio: cuadrícula -->
-<div class="hidden md:grid grid-cols-5 gap-4 py-10">
-<div class="flex flex-col items-center text-center gap-2">
+<!-- Escritorio: fila con más separación -->
+<div class="hidden md:flex items-center justify-center gap-20 py-12">
+<div class="flex flex-col items-center text-center gap-3">
 <span class="material-symbols-outlined text-accent text-3xl">factory</span>
-<span class="text-xs font-semibold uppercase tracking-[0.08em]">Producción propia</span>
+<span class="text-xs font-semibold uppercase tracking-[0.1em]">Producción propia</span>
 </div>
-<div class="flex flex-col items-center text-center gap-2">
+<div class="flex flex-col items-center text-center gap-3">
 <span class="material-symbols-outlined text-accent text-3xl">tune</span>
-<span class="text-xs font-semibold uppercase tracking-[0.08em]">Fabricación personalizada</span>
+<span class="text-xs font-semibold uppercase tracking-[0.1em]">Fabricación personalizada</span>
 </div>
-<div class="flex flex-col items-center text-center gap-2">
+<div class="flex flex-col items-center text-center gap-3">
 <span class="material-symbols-outlined text-accent text-3xl">bolt</span>
-<span class="text-xs font-semibold uppercase tracking-[0.08em]">Entrega rápida</span>
+<span class="text-xs font-semibold uppercase tracking-[0.1em]">Entrega rápida</span>
 </div>
-<div class="flex flex-col items-center text-center gap-2">
+<div class="flex flex-col items-center text-center gap-3">
 <span class="material-symbols-outlined text-accent text-3xl">verified</span>
-<span class="text-xs font-semibold uppercase tracking-[0.08em]">Calidad garantizada</span>
-</div>
-<div class="flex flex-col items-center text-center gap-2">
-<span class="material-symbols-outlined text-accent text-3xl">support_agent</span>
-<span class="text-xs font-semibold uppercase tracking-[0.08em]">Atención personalizada</span>
+<span class="text-xs font-semibold uppercase tracking-[0.1em]">Calidad garantizada</span>
 </div>
 </div>
 </section>
