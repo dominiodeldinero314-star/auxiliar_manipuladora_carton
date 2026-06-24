@@ -123,8 +123,9 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 </button>
 </div>
 </nav>
-<div class="hidden md:!hidden fixed inset-0 z-40 bg-surface" id="mobile-menu">
-<div class="flex flex-col h-full px-margin-mobile pt-28 pb-12">
+<div class="hidden md:!hidden fixed inset-0 z-40" id="mobile-menu">
+<div class="absolute inset-0 bg-black/50" id="mobile-menu-backdrop"></div>
+<div class="absolute top-0 right-0 h-full w-4/5 max-w-xs bg-surface shadow-2xl flex flex-col px-margin-mobile pt-28 pb-12 overflow-y-auto">
 <nav class="flex flex-col">
 <a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="index.html">Inicio</a>
 <a class="font-display text-2xl text-primary border-b border-outline-variant py-6" href="empresa.html">Empresa</a>
@@ -158,47 +159,6 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <a class="w-full sm:w-auto px-10 py-4 border border-white/40 text-white font-semibold uppercase tracking-[0.1em] text-sm hover:border-white transition-all duration-300 text-center" href="productos.html">
                     Ver productos
                 </a>
-</div>
-</div>
-</section>
-<!-- TRUST STRIP -->
-<section class="bg-surface-container border-b border-outline-variant px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto fade-in-up">
-<!-- Móvil: cuadrícula 2x2 -->
-<div class="grid grid-cols-2 gap-3 py-6 md:hidden">
-<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">factory</span>
-<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Producción propia</span>
-</div>
-<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">tune</span>
-<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Fabricación personalizada</span>
-</div>
-<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">bolt</span>
-<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Entrega rápida</span>
-</div>
-<div class="flex flex-col items-center text-center gap-2 p-3 border border-outline-variant rounded-sm bg-surface">
-<span class="material-symbols-outlined text-accent text-base bg-accent/10 rounded-full p-2">verified</span>
-<span class="text-[11px] font-semibold uppercase tracking-[0.04em] leading-snug">Calidad garantizada</span>
-</div>
-</div>
-<!-- Escritorio: fila con más separación -->
-<div class="hidden md:flex items-center justify-center gap-20 py-12">
-<div class="flex flex-col items-center text-center gap-3">
-<span class="material-symbols-outlined text-accent text-3xl">factory</span>
-<span class="text-xs font-semibold uppercase tracking-[0.1em]">Producción propia</span>
-</div>
-<div class="flex flex-col items-center text-center gap-3">
-<span class="material-symbols-outlined text-accent text-3xl">tune</span>
-<span class="text-xs font-semibold uppercase tracking-[0.1em]">Fabricación personalizada</span>
-</div>
-<div class="flex flex-col items-center text-center gap-3">
-<span class="material-symbols-outlined text-accent text-3xl">bolt</span>
-<span class="text-xs font-semibold uppercase tracking-[0.1em]">Entrega rápida</span>
-</div>
-<div class="flex flex-col items-center text-center gap-3">
-<span class="material-symbols-outlined text-accent text-3xl">verified</span>
-<span class="text-xs font-semibold uppercase tracking-[0.1em]">Calidad garantizada</span>
 </div>
 </div>
 </section>
@@ -555,6 +515,8 @@ Conoce nuestra empresa
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => setMobileMenuOpen(false));
         });
+
+        document.getElementById('mobile-menu-backdrop').addEventListener('click', () => setMobileMenuOpen(false));
     </script>
 </body>
 </html>
