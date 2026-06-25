@@ -77,6 +77,14 @@
             opacity: 1;
             transform: translateY(0);
         }
+        @keyframes entranceUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .entrance-up {
+            opacity: 0;
+            animation: entranceUp 0.7s ease forwards;
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-accent selection:text-on-accent overflow-x-hidden">
@@ -117,9 +125,9 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <div class="absolute inset-0 bg-primary/80"></div>
 </div>
 <div class="relative z-10 flex flex-col items-center text-center pt-36 pb-16 md:pt-44 md:pb-20 px-margin-mobile max-w-container-max mx-auto">
-<span class="text-accent font-semibold uppercase tracking-[0.2em] text-xs md:text-sm mb-4">Nuestra empresa</span>
+<span class="entrance-up text-accent font-semibold uppercase tracking-[0.2em] text-xs md:text-sm mb-4" style="animation-delay: 0.1s;">Nuestra empresa</span>
 <h1 class="font-display text-4xl md:text-6xl font-semibold uppercase leading-tight text-white">Más de 30 años fabricando cartón</h1>
-<p class="text-white/85 text-lg max-w-xl mt-4">Planta propia, maquinaria propia y un equipo técnico que conoce cada fase del proceso de fabricación.</p>
+<p class="entrance-up text-white/85 text-lg max-w-xl mt-4" style="animation-delay: 0.35s;">Planta propia, maquinaria propia y un equipo técnico que conoce cada fase del proceso de fabricación.</p>
 </div>
 </section>
 <!-- HISTORIA -->

@@ -62,6 +62,14 @@
             0% { transform: scale(1); }
             100% { transform: scale(1.12); }
         }
+        @keyframes entranceUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .entrance-up {
+            opacity: 0;
+            animation: entranceUp 0.7s ease forwards;
+        }
         .nav-underline {
             position: relative;
         }
@@ -90,7 +98,7 @@
         .timeline-fill {
             transform: scaleY(0);
             transform-origin: top;
-            transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .fade-in-up.visible .timeline-fill {
             transform: scaleY(1);
@@ -142,17 +150,17 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <div class="absolute inset-0 bg-primary/70"></div>
 </div>
 <div class="relative z-10 flex flex-col justify-center items-center text-center md:items-start md:text-left h-full pt-16 md:pt-0 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-<span class="text-accent font-semibold uppercase tracking-[0.15em] md:tracking-[0.2em] text-xs md:text-sm mb-6 leading-relaxed">
+<span class="entrance-up text-accent font-semibold uppercase tracking-[0.15em] md:tracking-[0.2em] text-xs md:text-sm mb-6 leading-relaxed" style="animation-delay: 0.1s;">
 <span class="md:hidden">Fabricación de<br/>embalaje de cartón</span>
 <span class="hidden md:inline">Fabricación de embalaje de cartón</span>
 </span>
 <h1 class="font-display text-5xl md:text-7xl font-semibold uppercase leading-[1.05] text-white max-w-4xl mb-6">
                 Embalaje de cartón a la medida de tu producto
             </h1>
-<p class="text-lg text-white/85 max-w-2xl mx-auto md:mx-0 mb-12">
+<p class="entrance-up text-lg text-white/85 max-w-2xl mx-auto md:mx-0 mb-12" style="animation-delay: 0.35s;">
                 Diseñamos, troquelamos y fabricamos cajas, embalaje a medida y expositores de cartón para empresas de toda España.
             </p>
-<div class="flex flex-col items-center w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:flex-row gap-5">
+<div class="entrance-up flex flex-col items-center w-full max-w-xs mx-auto sm:max-w-none sm:w-auto sm:flex-row gap-5" style="animation-delay: 0.5s;">
 <a class="w-full sm:w-auto px-10 py-4 bg-accent text-on-accent font-semibold uppercase tracking-[0.1em] text-sm hover:bg-white hover:text-primary transition-all duration-300 text-center" href="contacto.html">
                     Solicitar presupuesto
                 </a>
@@ -180,21 +188,21 @@ AUXILIAR<br/><span class="text-accent">MANIPULADORA DEL CARTÓN</span>
 <div class="absolute left-[7px] top-3 bottom-3 w-px bg-outline-variant"></div>
 <div class="absolute left-[7px] top-3 bottom-3 w-px bg-accent timeline-fill"></div>
 <div class="group flex items-start gap-6 pb-12">
-<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 300ms;"></span>
+<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 100ms;"></span>
 <div>
-<span class="font-display text-4xl md:text-5xl font-semibold text-primary block">+30</span>
+<span class="font-display text-4xl md:text-5xl font-semibold text-primary block" data-count-to="30" data-prefix="+">0</span>
 <span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Años de experiencia</span>
 </div>
 </div>
 <div class="group flex items-start gap-6 pb-12">
-<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 600ms;"></span>
+<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 500ms;"></span>
 <div>
-<span class="font-display text-4xl md:text-5xl font-semibold text-primary block">12.000 t</span>
+<span class="font-display text-4xl md:text-5xl font-semibold text-primary block" data-count-to="12000" data-suffix=" t">0</span>
 <span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Cartón procesado al año</span>
 </div>
 </div>
 <div class="group flex items-start gap-6">
-<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 900ms;"></span>
+<span class="timeline-dot mt-2 w-3.5 h-3.5 rounded-full bg-accent ring-4 ring-accent/20 shrink-0" style="transition-delay: 1150ms;"></span>
 <div>
 <span class="font-display text-2xl md:text-3xl font-semibold text-primary block">Cobertura nacional</span>
 <span class="text-sm font-medium uppercase tracking-[0.15em] text-secondary">Distribución en toda España</span>
@@ -488,10 +496,34 @@ Conoce nuestra empresa
 </footer>
 <script>
         // Scroll Animation Logic
+        function animateCount(el) {
+            const target = parseFloat(el.dataset.countTo);
+            const prefix = el.dataset.prefix || '';
+            const suffix = el.dataset.suffix || '';
+            const duration = 1200;
+            const start = performance.now();
+            function step(now) {
+                const progress = Math.min((now - start) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                const value = Math.round(target * eased);
+                el.textContent = prefix + value.toLocaleString('es-ES') + suffix;
+                if (progress < 1) requestAnimationFrame(step);
+            }
+            requestAnimationFrame(step);
+        }
+
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) entry.target.classList.add('visible');
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.querySelectorAll('[data-count-to]').forEach(el => {
+                        if (!el.dataset.counted) {
+                            el.dataset.counted = 'true';
+                            animateCount(el);
+                        }
+                    });
+                }
             });
         }, observerOptions);
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
